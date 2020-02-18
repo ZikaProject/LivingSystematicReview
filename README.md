@@ -1,2 +1,2 @@
-# ncovPublic
-[Visit out project website](http://zikaproject.github.io/ncovPublic)
+# LivingSystematicReview
+[Visit out project website](http://zikaproject.github.io/LivingSystematicReview)
