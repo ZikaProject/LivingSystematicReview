@@ -8,7 +8,7 @@ On this website, we explain how we set up a *Living Systematic Review* that can:
 
 ## Living systematic reviews
 
-In our 2018 paper [Counotte et al.](https://f1000research.com/articles/7-196/v1), we describe the workflow of conducting a living systematic review. 
+In our 2018 paper ([Counotte et al.](https://f1000research.com/articles/7-196/v1)), we describe the workflow of conducting a living systematic review. 
 
 ![lsr workflow](https://f1000researchdata.s3.amazonaws.com/manuscripts/14886/9bcb9d8e-802c-4066-a6b4-5475e992e82b_figure1.gif)
 
