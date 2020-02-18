@@ -1,6 +1,41 @@
 # Getting data from different sources
 
+## Defining the data format
 
+
+## PubMed 
+PubMed is accessible through the package [RISMed](https://cran.r-project.org/web/packages/RISmed/RISmed.pdf). We still need to process the data to a prespecified format.
+
+```R
+library("RISmed")
+
+PMquery="(\"Wuhan coronavirus\" [Supplementary Concept] OR \"2019 ncov\"[tiab] OR ((\"novel coronavirus\"[tiab] OR \"new coronavirus\"[tiab]) AND (wuhan[tiab] OR 2019[tiab])) OR 2019-nCoV[All Fields] OR (wuhan[tiab] AND coronavirus[tiab])))))"
+
+Searchpubmed<-function(query){
+
+  search_query <- EUtilsSummary(query, retmax=1000) # we can restrict time with: , mindate=2012, maxdate=2019)
+  records<- EUtilsGet(search_query)
+  
+  #concatenate authors:
+  authors<-vector()
+  author1<-vector()
+  for(n in 1:length(records@Author)){
+    tmp<-paste0(records@Author[[n]]$LastName,", ",records@Author[[n]]$Initials)
+    tmp2<-paste(tmp, collapse="; ")
+    authors<-append(authors,tmp2)
+    author1<-append(author1,records@Author[[n]]$LastName[1])
+  }
+  
+  # we need to add additional fields
+  pubmed_data <- data.frame('authors'=authors, 'title'=ArticleTitle(records),
+                            'abstract'=AbstractText(records),'journal'=MedlineTA(records), 'pages'=MedlinePgn(records),
+                            'volume'=Volume(records),'issue'=Issue(records),'year'=YearPubmed(records),
+                            'pmid'=PMID(records), 'doi'=ELocationID(records), 
+                            'url1'=paste0("https://www.ncbi.nlm.nih.gov/pubmed/",PMID(records)), 'author1'=author1) 
+  
+ return(pubmed_data) 
+}  
+```
 
 ## medRxiv and bioRxiv
 Here, we opted for a very simple solution. We grab all DOIs of the last 75 record, and requiry these to get the complete citation data:
