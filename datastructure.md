@@ -15,7 +15,7 @@
 | month         |                                                           |
 | epub          | first date of publication (DD-MM-YYYY)                    |
 | date_entrez   | date the publication was entered in database (DD-MM-YYYY) |
-| pmid          | Pubmed identified                                         |
+| pmid          | Pubmed identifier                                         |
 | embase_id     | Embase identifier                                         |
 | doi           | DOI                                                       |
 | language      |                                                           |
