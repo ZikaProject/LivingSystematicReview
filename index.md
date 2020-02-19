@@ -12,6 +12,6 @@ In our 2018 paper ([Counotte et al.](https://f1000research.com/articles/7-196/v1
 
 ![lsr workflow](https://f1000researchdata.s3.amazonaws.com/manuscripts/14886/9bcb9d8e-802c-4066-a6b4-5475e992e82b_figure1.gif)
 
-We start by [**Collecting data**](collectingdata) from different data sources. [Here](collectingdata), we describe how to get references from medRxiv, bioRxiv and PubMed. We also include information from EMBASE via [Ovid](https://ovidsp.ovid.com/), but are we are currently not at liberty to share our methods. 
+We start by [**Collecting data**](collectingdata.html) from different data sources. [Here](collectingdata.html), we describe how to get references from medRxiv, bioRxiv and PubMed. We also include information from EMBASE via [Ovid](https://ovidsp.ovid.com/), but are we are currently not at liberty to share our methods. 
 
-Once we have clean reference data from different sources, we perform [**Deduplication**](deduplication). 
+Once we have clean reference data from different sources, we perform [**Deduplication**](deduplication.html). 
