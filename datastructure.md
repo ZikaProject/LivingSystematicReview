@@ -23,3 +23,5 @@
 | abstract      | Abstract text                                             |
 | source        | 1, MedRxiv | 2, BioRxiv | 3, EMBASE | 4, PubMed           |
 | strategydate  | date the search was run (DD-MM-YYYY)                      |
+
+Created with the kind help of [https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
